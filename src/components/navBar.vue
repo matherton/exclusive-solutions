@@ -1,9 +1,12 @@
+<script setup>
+import hamburger from "./hamburger.vue";
+</script>
 <template lang="">
-  <div className="navbar bg-base-100 shadow-sm z-50">
+  <div className="navbar bg-base-100 shadow-sm z-50 mb-10">
     <div className="navbar-start">
       <div className="dropdown">
-        <div tabIndex="{0}" role="button" className="btn btn-ghost lg:hidden">
-          Menu ⬇️
+        <div tabIndex="{0}" role="button" className=" btn-ghost lg:hidden">
+          <hamburger />
         </div>
         <ul
           tabIndex="{0}"
