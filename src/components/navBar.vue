@@ -1,10 +1,8 @@
-<script setup>
-import hamburger from "./hamburger.vue";
-</script>
+<script setup></script>
 <template lang="">
   <div class="navbar bg-base-100 shadow-sm">
     <div class="navbar-start">
-      <div class="dropdown">
+      <div class="dropdown bg-neutral text-neutral-content">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +21,7 @@ import hamburger from "./hamburger.vue";
         </div>
         <ul
           tabindex="0"
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          class="menu menu-sm dropdown-content bg-red rounded-box z-1 mt-3 w-52 p-2 shadow"
         >
           <li><a>Item 1</a></li>
           <li>
