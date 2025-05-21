@@ -1,11 +1,13 @@
 <template lang="">
-  <div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 gap-4">
-    <div>01</div>
-    <div>02</div>
-    <div>03</div>
-    <div>04</div>
-    <div>05</div>
-    <div>06</div>
+  <div
+    class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 gap-4 m-2 bg-white text-black rounded"
+  >
+    <div class="border">01</div>
+    <div class="border">02</div>
+    <div class="border">03</div>
+    <div class="border">04</div>
+    <div class="border">05</div>
+    <div class="border">06</div>
   </div>
 </template>
 <script>
