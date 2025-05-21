@@ -33,7 +33,7 @@ const closeMobileMenu = () => {
           />
         </svg>
       </button>
-      <a class="btn btn-ghost text-xl">Exclusive Solutions</a>
+      <a class="btn btn-ghost text-xl">Exclusive Solutions <sup>Ltd</sup></a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">

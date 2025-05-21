@@ -4,7 +4,7 @@ import gridColLayout from "./gridColLayout.vue";
 <template lang="">
   <div class="drawer">
     <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-    <div class="drawer-content p-2">
+    <div class="drawer-content">
       <!-- Page content here -->
       <gridColLayout />
       <label for="my-drawer" class="btn btn-primary drawer-button"
