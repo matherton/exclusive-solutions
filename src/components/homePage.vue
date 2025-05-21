@@ -1,11 +1,18 @@
 <script setup>
 import gridColLayout from "./gridColLayout.vue";
+import Hero from "./Hero.vue";
+
+const components = {
+  gridColLayout,
+  Hero,
+};
 </script>
 <template lang="">
   <div class="drawer">
     <input id="my-drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content">
       <!-- Page content here -->
+      <Hero />
       <gridColLayout />
       <label for="my-drawer" class="btn btn-primary drawer-button"
         >Open drawer</label
