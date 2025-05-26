@@ -1,5 +1,6 @@
 <script setup>
 import gridColLayout from "./gridColLayout.vue";
+import Carousel from "./carousel.vue";
 import Hero from "./Hero.vue";
 
 const components = {
@@ -12,6 +13,8 @@ const components = {
     <input id="my-drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content">
       <!-- Page content here -->
+      <Carousel />
+
       <Hero />
       <gridColLayout />
       <label for="my-drawer" class="btn btn-primary drawer-button"
