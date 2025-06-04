@@ -12,7 +12,7 @@ const components = {
 </script>
 <template lang="">
   <div id="hero-slider">
-    <HeroSlides :image="images[4]" />
+    <HeroSlides :image="images[chooseImage]" />
   </div>
 </template>
 <script>
@@ -52,10 +52,32 @@ export default {
           subText: "Ride the streets",
         },
       ],
+      chooseImage: 0,
     };
   },
-  mounted() {
-    console.log(this.images);
+  methods: {
+    move() {
+      if (this.chooseImage >= this.images.length - 1) {
+        this.chooseImage = 0; // Reset to first image
+      } else {
+        this.chooseImage++; // Move to next image
+      }
+      // Uncomment the line below to log the current image index
+      // console.log("Current image index:", this.chooseImage);
+      // Uncomment the line below to log the current image title
+      // console.log("Current image title:", this.images[this.chooseImage].title);
+      // Uncomment the line below to log the current image subText
+      // console.log("Current image subText:", this.images[this.chooseImage].subText);
+      // Uncomment the line below to log the current image src
+      // console.log("Current image src:", this.images[this.chooseImage].src);
+      // Uncomment the line below to log the current image id
+      // console.log("Current image id:", this.images[this.chooseImage].id);
+    },
+  },
+  created() {
+    setInterval(() => {
+      this.move();
+    }, 4000); // Change image every 4 seconds
   },
 };
 </script>
