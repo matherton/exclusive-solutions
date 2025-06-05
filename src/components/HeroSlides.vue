@@ -1,15 +1,13 @@
 <template lang="">
-  <div id="hero-slides">
-    <transition-group name="fade">
-      <div class="slideImage" :style="backgroundStyle">
-        <div class="slideTitle">
-          <h2>{{ image.title }}</h2>
+  <transition-group name="fade" mode="out-in" tag="div" id="hero-slides">
+    <div class="slideImage" :style="backgroundStyle" key:="image.id">
+      <div class="slideTitle">
+        <h2>{{ image.title }}</h2>
 
-          <p>{{ image.subText }}</p>
-        </div>
+        <p>{{ image.subText }}</p>
       </div>
-    </transition-group>
-  </div>
+    </div>
+  </transition-group>
 </template>
 <script>
 export default {
@@ -55,5 +53,36 @@ export default {
 }
 #hero-slides .slideTitle p {
   font-size: 1.5rem;
+}
+
+.fade-enter-active {
+  animation-name: fadeenter;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+.fade-move {
+  transition: all 1s ease;
+}
+.fade-leave-active {
+  animation-name: fadeleave;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  position:absolute;
+}
+@keyframes fadeenter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeleave {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 </style>
