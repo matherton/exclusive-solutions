@@ -30,6 +30,24 @@ export default {
 };
 </script>
 <style>
+.slideImage {
+  position: relative;
+}
+
+.slideImage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slideTitle h2, .slideTitle p {
+  color: #fff; /* or any other color you want */
+  z-index: 1; /* bring the text above the overlay */
+}
 #hero-slides .slideImage {
   height: 100vh;
   width: 100%;
@@ -50,9 +68,11 @@ export default {
 #hero-slides .slideTitle h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  opacity: 1;
 }
 #hero-slides .slideTitle p {
   font-size: 1.5rem;
+  opacity: 1;
 }
 
 .fade-enter-active {
