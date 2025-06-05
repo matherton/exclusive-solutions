@@ -12,11 +12,11 @@ const components = {
 };
 </script>
 <template lang="">
-  <Carousel />
-
+  <HeroSlider />
+  <gridColLayout />
   <Hero />
   <gridColLayout />
-  <HeroSlider />
+  <Carousel />
 </template>
 <script>
 export default {
