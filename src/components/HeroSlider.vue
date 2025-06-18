@@ -13,7 +13,7 @@ const components = {
 <template lang="">
   <div class="hero-slider-container">
     <div class="hero-slider">
-      <div class="arrowRight" @click="move">
+      <div class="arrowRight" @click="moveRight">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-24 w-24"
@@ -31,7 +31,7 @@ const components = {
       </div>
 
       <HeroSlides :image="images[chooseImage]" />
-      <div class="arrowLeft" @click="move">
+      <div class="arrowLeft" @click="moveLeft">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-24 w-24"
@@ -96,6 +96,20 @@ export default {
         this.chooseImage = 0; // Reset to first image
       } else {
         this.chooseImage++; // Move to next image
+      }
+    },
+    moveRight() {
+      if (this.chooseImage >= this.images.length - 1) {
+        this.chooseImage = 0; // Reset to first image
+      } else {
+        this.chooseImage++; // Move to next image
+      }
+    },
+    moveLeft() {
+      if (this.chooseImage <= 0) {
+        this.chooseImage = this.images.length + 1; // Reset to last image
+      } else {
+        this.chooseImage--; // Move to next image
       }
       // Uncomment the line below to log the current image index
       // console.log("Current image index:", this.chooseImage);
