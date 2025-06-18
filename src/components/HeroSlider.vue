@@ -12,15 +12,15 @@ const components = {
 </script>
 <template lang="">
   <div class="hero-slider-container">
-    <div id="hero-slider">
+    <div class="hero-slider">
       <div class="arrowRight" @click="move">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-12 w-12"
+          class="h-24 w-24"
           fill="white"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="green"
+          stroke="white"
         >
           <path
             stroke-linecap="round"
@@ -34,11 +34,11 @@ const components = {
       <div class="arrowLeft" @click="move">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-12 w-12"
+          class="h-24 w-24"
           fill="white"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="green"
+          stroke="white"
         >
           <path
             stroke-linecap="round"
@@ -116,4 +116,26 @@ export default {
   },
 };
 </script>
-<style lang=""></style>
+<style>
+.hero-slider {
+  position: relative;
+}
+
+.arrowRight {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 10; /* Ensure the arrow is above the slides */
+  cursor: pointer;
+}
+
+.arrowLeft {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 10; /* Ensure the arrow is above the slides */
+  cursor: pointer;
+}
+</style>
