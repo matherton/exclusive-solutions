@@ -11,8 +11,43 @@ const components = {
 };
 </script>
 <template lang="">
-  <div id="hero-slider">
-    <HeroSlides :image="images[chooseImage]" />
+  <div class="hero-slider-container">
+    <div id="hero-slider">
+      <div class="arrowRight" @click="move">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-12 w-12"
+          fill="white"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="green"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10 4l6 6-6 6z"
+          />
+        </svg>
+      </div>
+
+      <HeroSlides :image="images[chooseImage]" />
+      <div class="arrowLeft" @click="move">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-12 w-12"
+          fill="white"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="green"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M14 4l-6 6 6 6z"
+          />
+        </svg>
+      </div>
+    </div>
   </div>
 </template>
 <script>
