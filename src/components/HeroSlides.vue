@@ -1,6 +1,6 @@
 <template lang="">
   <transition-group name="fade" mode="out-in" tag="div" id="hero-slides">
-    <div class="slideImage" :style="backgroundStyle" key:="image.id">
+    <div class="slideImage" :style="backgroundStyle" :key="image.id">
       <div class="slideTitle">
         <h2>{{ image.title }}</h2>
 
@@ -44,7 +44,8 @@ export default {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.slideTitle h2, .slideTitle p {
+.slideTitle h2,
+.slideTitle p {
   color: #fff; /* or any other color you want */
   z-index: 1; /* bring the text above the overlay */
 }
@@ -87,7 +88,7 @@ export default {
   animation-name: fadeleave;
   animation-duration: 1s;
   animation-iteration-count: 1;
-  position:absolute;
+  position: absolute;
 }
 @keyframes fadeenter {
   from {
