@@ -106,10 +106,10 @@ export default {
       }
     },
     moveLeft() {
-      if (this.chooseImage <= 0) {
-        this.chooseImage = this.images.length + 1; // Reset to last image
+      if (this.chooseImage === 0) {
+        this.chooseImage = this.images.length - 1;
       } else {
-        this.chooseImage--; // Move to next image
+        this.chooseImage--;
       }
       // Uncomment the line below to log the current image index
       // console.log("Current image index:", this.chooseImage);
