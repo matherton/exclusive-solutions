@@ -2,17 +2,19 @@
 import gridColLayout from "./gridColLayout.vue";
 import Carousel from "./carousel.vue";
 import Hero from "./Hero.vue";
-import HeroSlider from "./HeroSlider.vue";
+// import HeroSlider from "./HeroSlider.vue";
+import HeroSlideTransition from "./HeroSlideTransition.vue";
 
 const components = {
   gridColLayout,
   Hero,
   Carousel,
-  HeroSlider,
+  HeroSlideTransition,
 };
 </script>
 <template lang="">
-  <HeroSlider />
+  <!-- <HeroSlider /> -->
+  <HeroSlideTransition />
   <gridColLayout />
   <Hero />
   <gridColLayout />
