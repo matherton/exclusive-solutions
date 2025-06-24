@@ -4,12 +4,14 @@ import Carousel from "./carousel.vue";
 import Hero from "./Hero.vue";
 // import HeroSlider from "./HeroSlider.vue";
 import HeroSlideTransition from "./HeroSlideTransition.vue";
+import Divider from "./divider.vue";
 
 const components = {
   gridColLayout,
   Hero,
   Carousel,
   HeroSlideTransition,
+  Divider,
 };
 </script>
 <template lang="">
@@ -17,7 +19,7 @@ const components = {
   <HeroSlideTransition />
   <gridColLayout />
   <Hero />
-  <gridColLayout />
+  <Divider />
   <Carousel />
 </template>
 <script>
