@@ -22,7 +22,7 @@
     <!-- Controls -->
     <button
       @click="prevAndReset"
-      class="btn btn-white absolute left-4 top-1/2 -translate-y-1/2 z-10"
+      class="btn btn-white absolute left-4 top-1/2 -translate-y-1/2"
       aria-label="Previous slide"
       title="Previous slide"
       alt="previous slide control"
@@ -31,7 +31,7 @@
     </button>
     <button
       @click="nextAndReset"
-      class="btn btn-white absolute right-4 top-1/2 -translate-y-1/2 z-10"
+      class="btn btn-white absolute right-4 top-1/2 -translate-y-1/2"
       aria-label="Next slide"
       title="Next slide"
       alt="next slide control"

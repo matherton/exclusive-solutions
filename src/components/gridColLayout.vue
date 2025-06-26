@@ -6,7 +6,7 @@ const components = {
 </script>
 <template lang="">
   <div
-    class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 gap-4 m-2 bg-white text-black rounded"
+    class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6 gap-4 m-2 bg-white text-black rounded center items-center justify-items-center p-2"
   >
     <div class="border"><leftDrawer /></div>
     <div class="border">
